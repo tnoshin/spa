@@ -15,7 +15,7 @@
 
 <body>
 
-    <!-- ================= NAVIGATION ================= -->
+    <!-- nav -->
     <nav>
         <div class="brand">
             <svg class="brand-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
@@ -41,7 +41,7 @@
         </div>
     </nav>
 
-    <!-- ================= HERO ================= -->
+    <!-- hero -->
     <header class="herosection" id="hero">
         <div class="hero">
             <div class="copy">
@@ -57,8 +57,7 @@
                 </div>
             </div>
 
-            <!-- Put your own photo in the same folder and name it spa-hero.jpg.
-                 Until then, the soft green panel below shows instead. -->
+
             <div class="heroframe">
                 <svg class="heroleaf" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
                     stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
@@ -71,7 +70,7 @@
         </div>
     </header>
 
-    <!-- ================= TREATMENTS ================= -->
+    <!-- TREATMENTS -->
     <section class="section section-light" id="service">
         <p class="eyebrow center">What we offer</p>
         <h2 class="section-title">Our Treatments</h2>
@@ -160,7 +159,7 @@
         </div>
     </section>
 
-    <!-- ================= WHY CHOOSE US ================= -->
+    <!-- WHYCHOOSEUS  -->
     <section class="section">
         <p class="eyebrow center">Why Serenity</p>
         <h2 class="section-title">A Calmer Kind of Care</h2>
@@ -211,7 +210,7 @@
         </div>
     </section>
 
-    <!-- ================= TESTIMONIALS ================= -->
+    <!-- testimonial -->
     <section class="section section-light">
         <p class="eyebrow center">Kind words</p>
         <h2 class="section-title">What Our Guests Say</h2>
@@ -243,7 +242,7 @@
         </div>
     </section>
 
-    <!-- ================= BOOKING ================= -->
+    <!-- book -->
     <section class="ready" id="booking">
         <div class="ready-copy">
             <p class="eyebrow">Reservations</p>
@@ -257,10 +256,9 @@
         </div>
 
         <form class="bookform" action="https://api.web3forms.com/submit" method="POST">
-            <!-- Replace with your own Web3Forms access key -->
+            <!-- think later  -->
             <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
             <input type="hidden" name="subject" value="New spa booking request">
-            <!-- Honeypot: bots tick this hidden box, real people never see it -->
             <input type="checkbox" name="botcheck" class="hidden-field" tabindex="-1" autocomplete="off">
 
             <p class="full">
@@ -298,7 +296,7 @@
         </form>
     </section>
 
-    <!-- ================= FOOTER ================= -->
+    <!-- footer -->
     <footer class="footer" id="footer">
         <div class="footers">
             <div class="f1">
@@ -375,11 +373,11 @@
         <div class="disclaimer">
             This is a portfolio demonstration site. DemoSerenity Spa is not an actual business.
             All contact information, staff, reviews, and services are placeholders.
-            Built by <a href="https://github.com/shint24">Shin</a>.
+            Built by Shin. 
         </div>
     </footer>
 
-    <!-- ================= CHATBOT ================= -->
+    <!-- chatbot -->
     <button class="chat-bubble" id="chatBubble" onclick="toggleChat()" aria-label="Chat with Sage, our AI assistant" aria-describedby="chatTip">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
             stroke-linecap="round" stroke-linejoin="round">
@@ -389,7 +387,6 @@
             <path d="M16 12h.01" />
         </svg>
     </button>
-    <!-- Little speech bubble that appears when the mouse is over the chat icon -->
     <div class="chat-tip" id="chatTip">
         <strong>Not sure what to book?</strong>
         Ask Sage, our AI assistant, about treatments or free slots.
