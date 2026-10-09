@@ -255,11 +255,7 @@
             </ul>
         </div>
 
-        <form class="bookform" action="https://api.web3forms.com/submit" method="POST">
-            <!-- think later  -->
-            <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
-            <input type="hidden" name="subject" value="New spa booking request">
-            <input type="checkbox" name="botcheck" class="hidden-field" tabindex="-1" autocomplete="off">
+        <form class="bookform">
 
             <p class="full">
                 <label for="name">Name <span class="req">*</span></label>
@@ -293,6 +289,7 @@
             </p>
             <small id="dateNote" class="note full"></small>
             <button type="submit" class="submit full">Request Booking</button>
+            <span style="font-size: 10px; margin:auto">It is a placeholder booking form, it does not store any data. </span>
         </form>
     </section>
 
