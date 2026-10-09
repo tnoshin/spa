@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DemoSerenity Spa</title>
+>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVIGATION ================= -->
+    <nav>
+        <div class="brand">
+            <svg class="brand-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" />
+                <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" />
+            </svg>
+            <a href="#hero" class="brand-name">DemoSerenity Spa</a>
+        </div>
+
+        <button class="hamburger" onclick="toggleMenu()" aria-label="Open menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="rest">
+            <a href="#hero">Home</a>
+            <a href="#service">Treatments</a>
+            <a href="#footer">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="#booking" class="ba">Book a Treatment</a>
+        </div>
+    </nav>
+
+    <!-- ================= HERO ================= -->
+    <header class="herosection" id="hero">
+        <div class="hero">
+            <div class="copy">
+                <p class="eyebrow">Massage · Facials · Body rituals</p>
+                <h1>Slow Down. Breathe. Feel Restored.</h1>
+                <p class="lead">
+                    Unhurried treatments in a quiet, candle-lit space. Leave the noise at the door
+                    and let our therapists take care of the rest.
+                </p>
+                <div class="buttons">
+                    <a href="#booking" class="sv">Book a Treatment</a>
+                    <a href="#service" class="lm">Explore Treatments</a>
+                </div>
+            </div>
+
+            <!-- Put your own photo in the same folder and name it spa-hero.jpg.
+                 Until then, the soft green panel below shows instead. -->
+            <div class="heroframe">
+                <svg class="heroleaf" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" />
+                    <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" />
+                </svg>
+                <img src="spa-hero.jpg" class="heroimage" alt="A calm spa treatment room"
+                    onerror="this.style.display='none'">
+            </div>
+        </div>
+    </header>
+
+    <!-- ================= TREATMENTS ================= -->
+    <section class="section section-light" id="service">
+        <p class="eyebrow center">What we offer</p>
+        <h2 class="section-title">Our Treatments</h2>
+        <p class="section-sub">Every session is tailored to you, from pressure to scent to silence.</p>
+
+        <div class="cards">
+
+            <div class="servicei">
+                <div class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1" />
+                        <path d="M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1" />
+                        <path d="M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1" />
+                    </svg>
+                </div>
+                <div class="title">Swedish Massage</div>
+                <div class="des">Long, flowing strokes that ease tension and quiet a busy mind.</div>
+                <div class="meta">60 min</div>
+            </div>
+
+            <div class="servicei">
+                <div class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2" />
+                    </svg>
+                </div>
+                <div class="title">Deep Tissue Massage</div>
+                <div class="des">Slow, firm pressure that works into stubborn knots and tight muscles.</div>
+                <div class="meta">60 min</div>
+            </div>
+
+            <div class="servicei">
+                <div class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.500 3 5.500a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.500 2.500 0 0 0 2.500 2.500z" />
+                    </svg>
+                </div>
+                <div class="title">Hot Stone Therapy</div>
+                <div class="des">Warm basalt stones melt away stiffness and leave you deeply relaxed.</div>
+                <div class="meta">90 min</div>
+            </div>
+
+            <div class="servicei">
+                <div class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.900-3-5.500s-3.500-4-4-6.500c-.5 2.500-2 4.900-4 6.500C6 11.100 5 13 5 15a7 7 0 0 0 7 7z" />
+                    </svg>
+                </div>
+                <div class="title">Aromatherapy</div>
+                <div class="des">A gentle massage with essential oils chosen for how you want to feel.</div>
+                <div class="meta">60 min</div>
+            </div>
+
+            <div class="servicei">
+                <div class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z" />
+                        <path d="M20 2v4" />
+                        <path d="M22 4h-4" />
+                        <circle cx="4" cy="20" r="2" />
+                    </svg>
+                </div>
+                <div class="title">Signature Facial</div>
+                <div class="des">Cleanse, exfoliate and hydrate for skin that looks rested and bright.</div>
+                <div class="meta">60 min</div>
+            </div>
+
+            <div class="servicei">
+                <div class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" />
+                        <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" />
+                    </svg>
+                </div>
+                <div class="title">Body Scrub &amp; Wrap</div>
+                <div class="des">A full-body polish followed by a warm, nourishing botanical wrap.</div>
+                <div class="meta">90 min</div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ================= WHY CHOOSE US ================= -->
+    <section class="section">
+        <p class="eyebrow center">Why Serenity</p>
+        <h2 class="section-title">A Calmer Kind of Care</h2>
+        <p class="section-sub">Small details, done properly, so you can switch off completely.</p>
+
+        <div class="cards">
+
+            <div class="wcu">
+                <div class="icon round">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                        <path d="M16 3.128a4 4 0 0 1 0 7.744" />
+                        <path d="M22 21v-2a4 4 0 0 0-3-3.870" />
+                        <circle cx="9" cy="7" r="4" />
+                    </svg>
+                </div>
+                <div class="title">Certified Therapists</div>
+                <div class="des">Every therapist is fully trained and listens first, so your treatment
+                    fits your body, not a script.</div>
+            </div>
+
+            <div class="wcu">
+                <div class="icon round">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" />
+                        <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" />
+                    </svg>
+                </div>
+                <div class="title">Natural Products</div>
+                <div class="des">Plant-based oils and skincare, gentle on sensitive skin. Tell us about
+                    any allergies and we will adapt.</div>
+            </div>
+
+            <div class="wcu">
+                <div class="icon round">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.490 5.490 0 0 1 22 9.5c0 2.290-1.500 4-3 5.500l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.500-1.500-3-3.200-3-5.500" />
+                    </svg>
+                </div>
+                <div class="title">A Private, Quiet Space</div>
+                <div class="des">Individual rooms, soft lighting and no rushing between clients. Your
+                    time is yours from start to finish.</div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ================= TESTIMONIALS ================= -->
+    <section class="section section-light">
+        <p class="eyebrow center">Kind words</p>
+        <h2 class="section-title">What Our Guests Say</h2>
+        <p class="section-sub">Sample reviews for this demo site.</p>
+
+        <div class="cards">
+
+            <div class="wops">
+                <div class="stars">★★★★★</div>
+                <div class="des">"I walked in with a stiff neck and a full head. I walked out feeling
+                    like I had slept for a week. The hot stone therapy is wonderful."</div>
+                <div class="name">Sample Guest A</div>
+            </div>
+
+            <div class="wops">
+                <div class="stars">★★★★★</div>
+                <div class="des">"So calm and so clean. My therapist asked what I needed before
+                    starting and checked the pressure the whole way through."</div>
+                <div class="name">Sample Guest B</div>
+            </div>
+
+            <div class="wops">
+                <div class="stars">★★★★★</div>
+                <div class="des">"The facial left my skin glowing for days. Booking online took
+                    about a minute, and nobody rushed me out afterwards."</div>
+                <div class="name">Sample Guest C</div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ================= BOOKING ================= -->
+    <section class="ready" id="booking">
+        <div class="ready-copy">
+            <p class="eyebrow">Reservations</p>
+            <h2>Ready to Unwind?</h2>
+            <p>Pick a treatment and a time. We will hold your slot and confirm it with you.</p>
+            <ul class="ready-list">
+                <li>Mon – Fri, 9:00 AM – 8:00 PM</li>
+                <li>Saturday, 10:00 AM – 6:00 PM</li>
+                <li>Free rescheduling up to 24 hours before</li>
+            </ul>
+        </div>
+
+        <form class="bookform" action="https://api.web3forms.com/submit" method="POST">
+            <!-- Replace with your own Web3Forms access key -->
+            <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+            <input type="hidden" name="subject" value="New spa booking request">
+            <!-- Honeypot: bots tick this hidden box, real people never see it -->
+            <input type="checkbox" name="botcheck" class="hidden-field" tabindex="-1" autocomplete="off">
+
+            <p class="full">
+                <label for="name">Name <span class="req">*</span></label>
+                <input type="text" id="name" name="name" placeholder="Jane Smith" required>
+            </p>
+            <p>
+                <label for="email">Email <span class="optional">(optional)</span></label>
+                <input type="email" id="email" name="email" placeholder="jane@example.com">
+            </p>
+            <p>
+                <label for="treatment">Treatment <span class="req">*</span></label>
+                <select id="treatment" name="treatment" required>
+                    <option value="" disabled selected>Select a treatment</option>
+                    <option value="Swedish Massage">Swedish Massage (60 min)</option>
+                    <option value="Deep Tissue Massage">Deep Tissue Massage (60 min)</option>
+                    <option value="Hot Stone Therapy">Hot Stone Therapy (90 min)</option>
+                    <option value="Aromatherapy">Aromatherapy (60 min)</option>
+                    <option value="Signature Facial">Signature Facial (60 min)</option>
+                    <option value="Body Scrub and Wrap">Body Scrub &amp; Wrap (90 min)</option>
+                </select>
+            </p>
+            <p>
+                <label for="date">Date <span class="req">*</span></label>
+                <input type="date" id="date" name="date" required>
+            </p>
+            <p>
+                <label for="time">Time <span class="req">*</span></label>
+                <select id="time" name="time" required>
+                    <option value="" disabled selected>Choose a date first</option>
+                </select>
+            </p>
+            <small id="dateNote" class="note full"></small>
+            <button type="submit" class="submit full">Request Booking</button>
+        </form>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer" id="footer">
+        <div class="footers">
+            <div class="f1">
+                <div class="footern">
+                    <div class="footern1">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" />
+                            <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" />
+                        </svg>
+                    </div>
+                    <div class="footern2">DemoSerenity Spa</div>
+                </div>
+                A quiet place to slow down, breathe, and feel restored.
+            </div>
+
+            <div class="f2">
+                <div class="hfooter">Contact Us</div>
+                <div class="fd">
+                    <div class="frow">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" />
+                            <circle cx="12" cy="10" r="3" />
+                        </svg>
+                        <span>45 Willow Lane<br>Suite 3<br>San Francisco, CA 94102</span>
+                    </div>
+                    <div class="frow">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384" />
+                        </svg>
+                        <span>(555) 987-6543</span>
+                    </div>
+                    <div class="frow">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" />
+                            <rect x="2" y="4" width="20" height="16" rx="2" />
+                        </svg>
+                        <span>hello@example.com</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="f3">
+                <div class="hfooter">Opening Hours</div>
+                <div class="fd">
+                    <div class="frow">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10" />
+                            <path d="M12 6v6l4 2" />
+                        </svg>
+                        <span>
+                            Monday – Friday<br>
+                            9:00 AM – 8:00 PM<br><br>
+                            Saturday<br>
+                            10:00 AM – 6:00 PM<br><br>
+                            Sunday: Closed
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="maps">
+                <iframe title="Map showing the spa location"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.3338748750325!2d-122.4278669857624!3d37.78221459071182!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808580bd0b7fae2d%3A0xaad16049ae0b1ed!2sJefferson%20Square%20Park!5e0!3m2!1sen!2sbd!4v1777273277188!5m2!1sen!2sbd"
+                    style="border:0;" allowfullscreen loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+
+        <div class="disclaimer">
+            This is a portfolio demonstration site. DemoSerenity Spa is not an actual business.
+            All contact information, staff, reviews, and services are placeholders.
+            Built by <a href="https://github.com/shint24">Shin</a>.
+        </div>
+    </footer>
+
+    <!-- ================= CHATBOT ================= -->
+    <button class="chat-bubble" id="chatBubble" onclick="toggleChat()" aria-label="Chat with Sage, our AI assistant" aria-describedby="chatTip">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
+            <path d="M8 12h.01" />
+            <path d="M12 12h.01" />
+            <path d="M16 12h.01" />
+        </svg>
+    </button>
+    <!-- Little speech bubble that appears when the mouse is over the chat icon -->
+    <div class="chat-tip" id="chatTip">
+        <strong>Not sure what to book?</strong>
+        Ask Sage, our AI assistant, about treatments or free slots.
+    </div>
+
+    <div class="chat-window" id="chatWindow">
+        <div class="chat-header">
+            <span class="chat-title">Sage · Spa Assistant</span>
+            <button class="chat-close" onclick="toggleChat()" aria-label="Close chat">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 6 6 18" />
+                    <path d="m6 6 12 12" />
+                </svg>
+            </button>
+        </div>
+        <div class="chat-messages" id="chatMessages">
+            <div class="chat-msg assistant">
+                Hi, I'm Sage, the Serenity Spa assistant. Ask me about our treatments, opening hours, or free slots.
+                (This is a testing chatbot. Don't share real personal info.)
+            </div>
+        </div>
+        <div class="chat-input-area">
+            <input type="text" id="chatInput" class="chat-input" placeholder="Type a message..."
+                onkeydown="handleKey(event)">
+            <button class="chat-send" onclick="sendMessage()" aria-label="Send message">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.930 3.180a2 2 0 0 1 1.112 1.110z" />
+                    <path d="m21.854 2.147-10.940 10.939" />
+                </svg>
+            </button>
+        </div>
+        <div class="alert">AI assistant may occasionally be inaccurate. This is a testing chatbot. Don't share real personal info.</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

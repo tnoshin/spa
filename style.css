@@ -1,0 +1,1078 @@
+/* =========================================
+   COLORS & FONTS
+   Change a value here and it updates everywhere.
+   (Same palette as spa-booking.css, so both pages match.)
+   ========================================= */
+:root {
+    --cream: #FAF6F0;        /* page background */
+    --sand: #F1E9DD;         /* soft panels */
+    --card: #FFFDFA;         /* cards */
+    --line: #E6DCCD;         /* borders */
+
+    --sage: #7C8C6E;         /* decorative green */
+    --sage-dark: #5C6B50;    /* buttons and links (readable with white text) */
+    --sage-deep: #4A5741;    /* button hover */
+    --sage-soft: #E9EEE2;    /* icon backgrounds */
+
+    --clay: #B9856A;         /* warm accent */
+    --ink: #33302B;          /* main text */
+    --muted: #7A736A;        /* secondary text */
+    --forest: #2F3A2C;       /* footer background */
+
+    --font-heading: 'Cormorant Garamond', Georgia, serif;
+    --font-body: 'Jost', 'Segoe UI', Arial, sans-serif;
+
+    --nav-height: 72px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--nav-height);   /* stops the fixed nav covering section titles */
+}
+
+body {
+    background-color: var(--cream);
+    color: var(--ink);
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+a {
+    color: var(--sage-dark);
+}
+
+/* =========================================
+   NAVIGATION
+   ========================================= */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    height: var(--nav-height);
+    padding: 0 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(250, 246, 240, 0.95);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--line);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.brand-icon {
+    width: 40px;
+    height: 40px;
+    padding: 9px;
+    border-radius: 50%;
+    background-color: var(--sage-dark);
+    color: white;
+    flex-shrink: 0;
+}
+
+.brand-name {
+    font-family: var(--font-heading);
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--ink);
+    text-decoration: none;
+    letter-spacing: 0.3px;
+}
+
+.rest {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    font-size: 16px;
+}
+
+.rest a {
+    text-decoration: none;
+    color: var(--ink);
+    transition: color 0.3s ease;
+}
+
+.rest a:hover {
+    color: var(--clay);
+}
+
+.rest a.ba {
+    background-color: var(--sage-dark);
+    color: white;
+    padding: 10px 24px;
+    border-radius: 999px;
+    font-weight: 500;
+    white-space: nowrap;
+    transition: background-color 0.3s ease;
+}
+
+.rest a.ba:hover {
+    background-color: var(--sage-deep);
+    color: white;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    padding: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 2px;
+    border-radius: 2px;
+    background-color: var(--ink);
+}
+
+/* =========================================
+   SHARED TEXT STYLES
+   ========================================= */
+.eyebrow {
+    color: var(--clay);
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.center {
+    text-align: center;
+}
+
+/* =========================================
+   HERO
+   ========================================= */
+.herosection {
+    padding: calc(var(--nav-height) + 50px) 8% 70px;
+}
+
+.hero {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+h1 {
+    font-family: var(--font-heading);
+    font-size: 64px;
+    font-weight: 600;
+    line-height: 1.08;
+    margin-bottom: 20px;
+}
+
+.lead {
+    color: var(--muted);
+    font-size: 19px;
+    font-weight: 300;
+    max-width: 520px;
+    margin-bottom: 34px;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.sv,
+.lm {
+    display: inline-block;
+    padding: 13px 32px;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 999px;
+    border: 1.5px solid var(--sage-dark);
+    transition: all 0.3s ease;
+}
+
+.sv {
+    background-color: var(--sage-dark);
+    color: white;
+}
+
+.sv:hover {
+    background-color: var(--sage-deep);
+    border-color: var(--sage-deep);
+}
+
+.lm {
+    color: var(--sage-dark);
+}
+
+.lm:hover {
+    background-color: var(--sage-soft);
+}
+
+/* The arch-shaped frame. It shows a soft green panel with a leaf
+   until you add your own photo (spa-hero.jpg). */
+.heroframe {
+    position: relative;
+    height: 520px;
+    border-radius: 260px 260px 24px 24px;
+    overflow: hidden;
+    background: linear-gradient(160deg, #DDE5D3 0%, #F1E9DD 60%, #E9D8C8 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.heroleaf {
+    width: 130px;
+    height: 130px;
+    color: var(--sage);
+    opacity: 0.55;
+}
+
+.heroimage {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* =========================================
+   SECTIONS (treatments, why us, testimonials)
+   ========================================= */
+.section {
+    padding: 80px 8%;
+}
+
+.section-light {
+    background-color: var(--card);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+}
+
+.section-title {
+    font-family: var(--font-heading);
+    font-size: 44px;
+    font-weight: 600;
+    line-height: 1.15;
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.section-sub {
+    color: var(--muted);
+    font-size: 18px;
+    font-weight: 300;
+    text-align: center;
+    max-width: 560px;
+    margin: 0 auto 45px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+/* --- Cards: the three kinds share most of their look --- */
+.servicei,
+.wcu,
+.wops {
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    padding: 30px 26px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.servicei,
+.wops {
+    background-color: var(--cream);
+}
+
+.wcu {
+    background-color: var(--card);
+    text-align: center;
+}
+
+.servicei:hover,
+.wcu:hover,
+.wops:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 30px rgba(92, 107, 80, 0.12);
+}
+
+.icon {
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    background-color: var(--sage-soft);
+    color: var(--sage-dark);
+    margin-bottom: 18px;
+}
+
+.icon.round {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.title {
+    font-family: var(--font-heading);
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 8px;
+}
+
+.des {
+    color: var(--muted);
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.meta {
+    display: inline-block;
+    margin-top: 16px;
+    padding: 4px 12px;
+    border-radius: 999px;
+    background-color: var(--sand);
+    color: var(--sage-dark);
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.stars {
+    color: var(--clay);
+    font-size: 20px;
+    letter-spacing: 3px;
+    margin-bottom: 14px;
+}
+
+.wops .des {
+    font-style: italic;
+    margin-bottom: 18px;
+}
+
+.name {
+    color: var(--sage-dark);
+    font-weight: 500;
+}
+
+/* =========================================
+   BOOKING (text on the left, short form on the right)
+   ========================================= */
+.ready {
+    background-color: var(--sage-dark);
+    color: white;
+    padding: 80px 8%;
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.ready .eyebrow {
+    color: #E3C9B5;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.ready h2 {
+    font-family: var(--font-heading);
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 1.15;
+    margin-bottom: 12px;
+}
+
+.ready-copy p {
+    font-size: 18px;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.ready-list {
+    list-style: none;
+    margin-top: 24px;
+}
+
+.ready-list li {
+    padding: 10px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.bookform {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    padding: 30px;
+    background-color: var(--card);
+    color: var(--ink);
+    border-radius: 20px;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.18);
+}
+
+.bookform .full {
+    grid-column: 1 / -1;   /* stretch across both columns */
+}
+
+.bookform label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 6px;
+}
+
+.req {
+    color: var(--clay);
+}
+
+.optional {
+    color: var(--muted);
+    font-weight: 400;
+}
+
+.bookform input,
+.bookform select {
+    width: 100%;
+    padding: 12px 14px;
+    font-family: var(--font-body);
+    font-size: 16px;
+    color: var(--ink);
+    background-color: var(--cream);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.bookform input::placeholder {
+    color: #A9A196;
+}
+
+.bookform input:focus,
+.bookform select:focus {
+    border-color: var(--sage);
+    box-shadow: 0 0 0 3px rgba(124, 140, 110, 0.2);
+}
+
+.bookform .hidden-field {
+    display: none;
+}
+
+.note {
+    font-size: 14px;
+    color: var(--clay);
+}
+
+.note:empty {
+    display: none;   /* takes no space until there is a message */
+}
+
+.submit {
+    padding: 14px 40px;
+    font-family: var(--font-body);
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    color: white;
+    background-color: var(--sage-dark);
+    border: none;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit:hover {
+    background-color: var(--sage-deep);
+}
+
+/* =========================================
+   FOOTER
+   ========================================= */
+.footer {
+    background-color: var(--forest);
+    color: rgba(255, 255, 255, 0.72);
+    padding: 55px 8% 20px;
+    font-size: 15px;
+}
+
+.footers {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    margin-bottom: 35px;
+}
+
+.f1 {
+    line-height: 1.7;
+}
+
+.footern {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.footern1 {
+    width: 40px;
+    height: 40px;
+    padding: 9px;
+    border-radius: 50%;
+    background-color: var(--sage);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.footern2 {
+    font-family: var(--font-heading);
+    font-size: 24px;
+    font-weight: 600;
+    color: white;
+}
+
+.hfooter {
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: white;
+    margin-bottom: 18px;
+}
+
+.fd {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.frow {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.frow svg {
+    color: #C9B79C;
+    flex-shrink: 0;
+    margin-top: 3px;
+}
+
+.maps iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 200px;
+    border-radius: 18px;
+}
+
+.disclaimer {
+    border-top: 1px solid rgba(255, 255, 255, 0.14);
+    padding-top: 22px;
+    text-align: center;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.disclaimer a {
+    color: #C9B79C;
+}
+
+/* =========================================
+   CHATBOT
+   ========================================= */
+.chat-bubble {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 999;
+    width: 58px;
+    height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--sage-dark);
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 6px 16px rgba(74, 87, 65, 0.35);
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.chat-bubble:hover {
+    background-color: var(--sage-deep);
+    transform: scale(1.08);
+}
+
+/* --- Speech bubble next to the chat icon --- */
+.chat-tip {
+    position: fixed;
+    bottom: 32px;
+    right: 102px;
+    z-index: 999;
+    width: 250px;
+    padding: 12px 16px;
+    font-size: 14px;
+    line-height: 1.45;
+    color: var(--muted);
+    background-color: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 16px 16px 4px 16px;
+    box-shadow: 0 8px 24px rgba(47, 58, 44, 0.18);
+
+    /* hidden until the icon is hovered */
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(8px);
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.chat-tip strong {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: 19px;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 2px;
+}
+
+/* "+" means: the .chat-tip that comes right after the button.
+   focus-visible makes it appear for keyboard users too. */
+.chat-bubble:hover + .chat-tip,
+.chat-bubble:focus-visible + .chat-tip {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* no bubble while the chat window is open */
+.chat-bubble.chat-open + .chat-tip {
+    opacity: 0;
+}
+
+.chat-window {
+    position: fixed;
+    bottom: 100px;
+    right: 30px;
+    z-index: 998;
+    width: 400px;
+    height: 60dvh;
+    max-height: 460px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background-color: var(--cream);
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    box-shadow: 0 12px 36px rgba(47, 58, 44, 0.22);
+
+    /* hidden until it gets the "open" class */
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(12px);
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.chat-window.open {
+    opacity: 1;
+    pointer-events: all;
+    transform: translateY(0);
+}
+
+.chat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 18px;
+    background-color: var(--sage-dark);
+}
+
+.chat-title {
+    font-family: var(--font-heading);
+    font-size: 22px;
+    font-weight: 600;
+    color: white;
+}
+
+.chat-close {
+    display: flex;
+    padding: 4px;
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.75);
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.chat-close:hover {
+    color: white;
+}
+
+.chat-messages {
+    flex: 1;
+    overflow-y: auto;
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    scrollbar-width: thin;
+    scrollbar-color: var(--sage) transparent;
+}
+
+.chat-msg {
+    max-width: 82%;
+    padding: 10px 14px;
+    border-radius: 16px;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.chat-msg.assistant {
+    align-self: flex-start;
+    background-color: var(--card);
+    border: 1px solid var(--line);
+    border-bottom-left-radius: 4px;
+}
+
+.chat-msg.user {
+    align-self: flex-end;
+    background-color: var(--sage-dark);
+    color: white;
+    border-bottom-right-radius: 4px;
+}
+
+.chat-input-area {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 12px;
+    border-top: 1px solid var(--line);
+}
+
+.chat-input {
+    flex: 1;
+    padding: 10px 16px;
+    font-family: var(--font-body);
+    font-size: 15px;
+    color: var(--ink);
+    background-color: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.chat-input::placeholder {
+    color: #A9A196;
+}
+
+.chat-input:focus {
+    border-color: var(--sage);
+}
+
+.chat-send {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--sage-dark);
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.chat-send:hover {
+    background-color: var(--sage-deep);
+}
+
+.alert {
+    padding: 0 14px 10px;
+    font-size: 11px;
+    text-align: center;
+    color: var(--muted);
+}
+
+.typing-indicator {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 14px 16px;
+}
+
+.typing-indicator span {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--sage);
+    animation: typing-bounce 1.4s infinite ease-in-out;
+}
+
+.typing-indicator span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.typing-indicator span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes typing-bounce {
+    0%, 60%, 100% {
+        transform: translateY(0);
+        opacity: 0.4;
+    }
+
+    30% {
+        transform: translateY(-6px);
+        opacity: 1;
+    }
+}
+
+/* =========================================
+   TABLET - 1024px and below
+   ========================================= */
+@media (max-width: 1024px) {
+    nav {
+        padding: 0 5%;
+    }
+
+    .herosection {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    h1 {
+        font-size: 52px;
+    }
+
+    .heroframe {
+        height: 380px;
+        order: -1;   /* picture above the text */
+    }
+
+    .section,
+    .ready {
+        padding: 65px 5%;
+    }
+
+    .ready {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .footers {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    .maps iframe {
+        height: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+
+
+    .hamburger {
+        display: flex;
+    }
+
+    .rest {
+        display: none;
+    }
+
+    .rest.active {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        position: absolute;
+        top: 100%;         
+        left: 0;
+        right: 0;
+        gap: 0;
+        padding: 10px 5% 20px;
+        background-color: var(--cream);
+        border-bottom: 1px solid var(--line);
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08);
+    }
+
+    .rest.active a {
+        padding: 12px 0;
+        border-bottom: 1px solid var(--line);
+    }
+
+    .rest.active a.ba {
+        margin-top: 14px;
+        padding: 12px 24px;
+        text-align: center;
+        border-bottom: none;
+    }
+
+    /* --- Content --- */
+    .herosection {
+        padding-top: calc(var(--nav-height) + 30px);
+        padding-bottom: 50px;
+    }
+
+    h1 {
+        font-size: 42px;
+    }
+
+    .lead {
+        font-size: 17px;
+    }
+
+    .heroframe {
+        height: 300px;
+        border-radius: 150px 150px 20px 20px;
+    }
+
+    .section,
+    .ready {
+        padding: 50px 5%;
+    }
+
+    .section-title,
+    .ready h2 {
+        font-size: 34px;
+    }
+
+    .section-sub {
+        font-size: 16px;
+        margin-bottom: 30px;
+    }
+
+    .bookform {
+        grid-template-columns: 1fr;
+        padding: 24px 20px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .footers {
+        grid-template-columns: 1fr;
+    }
+
+    /* --- Chatbot --- */
+    .chat-window {
+        width: calc(100vw - 40px);
+        right: 20px;
+        bottom: 90px;
+    }
+
+    .chat-bubble {
+        right: 20px;
+        bottom: 20px;
+    }
+
+    .chat-tip {
+        right: 90px;
+        bottom: 22px;
+        width: min(250px, calc(100vw - 110px));
+    }
+}
+
+
+@media (max-width: 480px) {
+    nav {
+        padding: 0 4%;
+    }
+
+    .brand-name {
+        font-size: 22px;
+    }
+
+    .brand-icon {
+        width: 35px;
+        height: 35px;
+        padding: 8px;
+    }
+
+    .herosection {
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    .sv,
+    .lm {
+        width: 100%;
+        text-align: center;
+    }
+
+    .heroframe {
+        height: 250px;
+    }
+
+    .section,
+    .ready {
+        padding: 42px 4%;
+    }
+
+    .section-title,
+    .ready h2 {
+        font-size: 30px;
+    }
+
+    .servicei,
+    .wcu,
+    .wops {
+        padding: 24px 20px;
+    }
+
+    .title {
+        font-size: 24px;
+    }
+
+    .footer {
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+}
