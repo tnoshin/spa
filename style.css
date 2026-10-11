@@ -765,6 +765,7 @@ h1 {
     border-radius: 999px;
     outline: none;
     transition: border-color 0.2s ease;
+    min-width: 0;
 }
 
 .chat-input::placeholder {
@@ -793,7 +794,29 @@ h1 {
 .chat-send:hover {
     background-color: var(--sage-deep);
 }
+.chat-book {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border: 1.5px solid var(--sage-dark);
+    border-radius: 50%;
+    color: var(--sage-dark);
+    background-color: transparent;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
 
+.chat-book:hover {
+    background-color: var(--sage-soft);
+}
+
+.chat-book:focus-visible {
+    outline: 2px solid var(--sage);
+    outline-offset: 2px;
+}
 .alert {
     padding: 0 14px 10px;
     font-size: 11px;
